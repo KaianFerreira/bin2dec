@@ -1,18 +1,38 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <input type="number" v-model="binaryNumber">
+    {{converted}}
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+  },
+  data () {
+    return {
+      binaryNumber: '',
+      converted: 0
+    }
+  },
+  watch: {
+    binaryNumber (teste) {
+      let result = 0
+      let start = 1
+      let indexEnd = teste.length
+      const end = teste.length
+      while (start <= end) {
+        console.log(start, end)
+        result += Number(teste[start - 1]) * Math.pow(2, (indexEnd - 1))
+        start++
+        indexEnd--
+      }
+      this.converted = Number(result)
+    }
   }
+
 }
 </script>
 
