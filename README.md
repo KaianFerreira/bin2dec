@@ -10,6 +10,8 @@ Bin2Dec permite ao usuário inserir strings de até 8 dígitos binários, 0's e 
  babel  
  pwa  
  mobile-first  
+## Live version
+https://kaianferreira.github.io/bin2dec/
 
 ## Como instalar
 Na pasta raiz do projeto execute:
